@@ -12,7 +12,7 @@ urlpatterns = [
     path('verify-otp/', OTPVerifyView.as_view(), name='verify-otp'),
     path('login/', LoginView.as_view(), name='login'),
     path('user/<int:pk>/',Userdetails.as_view(),name='user'),
-    path('logout/', views.LogoutView.as_view(), name='logout')
+    path('logout/', views.LogoutView.as_view(), name='logout'),
 
 
 ]
