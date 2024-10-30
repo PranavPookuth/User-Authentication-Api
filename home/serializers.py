@@ -110,26 +110,3 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
 
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = '__all__'
-
-class ProductSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Product
-        fields = '__all__'
-
-class CustomerSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Customer
-        fields = '__all__'
-
-class OrderSerializer(serializers.ModelSerializer):
-   name=serializers.CharField(source='customer.customer_name',read_only=True)
-   p_name=serializers.CharField(source='product.product_name',read_only=True)
-   class Meta:
-        model = Order
-        fields = ['id','customer','product','quantity','order_date','name','p_name']
-
-
