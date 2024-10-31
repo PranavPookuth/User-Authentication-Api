@@ -120,4 +120,3 @@ class LogoutView(APIView):
 class Userdetails(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-gdal_char_p
