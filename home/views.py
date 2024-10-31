@@ -2,6 +2,7 @@ from datetime import datetime
 from random import random
 import random
 from django.contrib.auth import get_user_model, login
+from django.contrib.gis.gdal.prototypes.generation import gdal_char_p
 from django.core.mail import send_mail
 from django.shortcuts import render
 from rest_framework import generics,status
@@ -119,4 +120,4 @@ class LogoutView(APIView):
 class Userdetails(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-g
+gdal_char_p
